@@ -1,20 +1,37 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+import org.example.parkingSpots.CompactSpot;
+import org.example.parkingSpots.HandicappedSpot;
+import org.example.parkingSpots.RegularSpot;
+import org.example.vehicles.Car;
+import org.example.vehicles.HandicappedVehicle;
+import org.example.vehicles.Motorcycle;
+
 public class Main {
     public static void main(String[] args) {
-Practice practice = new Practice();
-practice.swapVariables(5, 10);
-practice.stringCompression("aaabbccccd");
+        CompactSpot compact = new CompactSpot(1);
+        RegularSpot regular = new RegularSpot(2);
+        HandicappedSpot handicapped = new HandicappedSpot(3);
 
+        ParkingLot parkingLot = new ParkingLot();
+        parkingLot.addSpot(compact);
+        parkingLot.addSpot(regular);
+        parkingLot.addSpot(handicapped);
 
-        practice.largestSumSubarray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4});
+        Car car = new Car("abc123");
+        Motorcycle motorcycle = new Motorcycle("def456");
+        HandicappedVehicle handicappedVehicle = new HandicappedVehicle("ghi789");
 
-        practice.rotateArray(new int[]{1, 2, 3, 4, 5, 6, 7}, 3);
+        parkingLot.parkVehicle(car);
+        parkingLot.parkVehicle(motorcycle);
+        parkingLot.parkVehicle(handicappedVehicle);
+
+        parkingLot.displayAvailableSpots();
+
+        parkingLot.removeVehicle(2);
+
+        parkingLot.displayAvailableSpots();
 
     }
 }
-
-
-
