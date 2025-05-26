@@ -11,5 +11,10 @@ public class Main {
 
         CycleDetection cycleDetection = new CycleDetection();
         System.out.println("check cycle: " + cycleDetection.hasCycle(linkedlist));
+
+        AnagramChecker anagramChecker = new AnagramChecker();
+        System.out.println("is anagram?: " + anagramChecker.isAnagram("Hello", "Olelh"));
+        System.out.println("is anagram?: " + anagramChecker.isAnagram("Hello", "World"));
+
     }
 }
