@@ -1,6 +1,5 @@
 package org.example;
 
-
 import org.example.parkingSpots.CompactSpot;
 import org.example.parkingSpots.HandicappedSpot;
 import org.example.parkingSpots.RegularSpot;
